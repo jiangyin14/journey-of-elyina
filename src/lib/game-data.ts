@@ -17,7 +17,7 @@ export const ALL_CARDS: CardData[] = [
     steps: 1,
     cost: 0,
     type: 'attack',
-    description: '造成 5 点伤害。',
+    description: '造成 5 点伤害。最基础的魔女攻击魔法。',
     ...findImage('card-magic-missile'),
   },
   {
@@ -35,7 +35,7 @@ export const ALL_CARDS: CardData[] = [
     steps: 2,
     cost: 1,
     type: 'skill',
-    description: '恢复 4 点体力。',
+    description: '恢复 4 点体力。旅行中必备的小技巧。',
     special: 'heal',
     ...findImage('card-healing-spray'),
   },
@@ -45,7 +45,7 @@ export const ALL_CARDS: CardData[] = [
     steps: 1,
     cost: 1,
     type: 'defense',
-    description: '本回合免疫1次敌人攻击。',
+    description: '本回合免疫1次敌人攻击。虽然有点丢人，但很实用。',
     special: 'morph',
     ...findImage('card-pigeon-morph'),
   },
@@ -68,6 +68,24 @@ export const ALL_CARDS: CardData[] = [
     type: 'defense',
     description: '获得 5 点护盾，并冻结敌人 1 回合。',
     ...findImage('card-ice-barrier'),
+  },
+  {
+    id: 'c7',
+    name: '时间回溯',
+    steps: 3,
+    cost: 2,
+    type: 'special',
+    description: '回收本回合使用过的1张卡牌至手牌。',
+    ...findImage('card-time-rewind'),
+  },
+  {
+    id: 'c8',
+    name: '共鸣魔法',
+    steps: 1,
+    cost: 1,
+    type: 'attack',
+    description: '造成等同于当前手牌数x2的伤害。',
+    ...findImage('card-resonance-magic'),
   },
 ];
 
@@ -98,7 +116,21 @@ export const INITIAL_ENEMY: Enemy = {
   name: '沉默森林的邪灵',
   hp: 40,
   maxHp: 40,
-  intent: { type: 'attack', value: 5, description: '攻击' },
+  intent: { type: 'attack', value: 5, description: '攻击 5' },
   statusEffects: [],
   attackWeakness: ['fire'],
 };
+
+// 后续可以增加更多敌人
+export const ALL_ENEMIES: Enemy[] = [
+    INITIAL_ENEMY,
+    {
+        id: 'e2',
+        name: '悲伤之国的诅咒源头',
+        hp: 50,
+        maxHp: 50,
+        intent: { type: 'special', value: 1, description: '绝望蔓延' },
+        statusEffects: [],
+        onHealPenalty: true, // 使用治愈牌时，诅咒暂停
+    }
+]

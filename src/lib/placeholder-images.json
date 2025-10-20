@@ -3,8 +3,8 @@
     {
       "id": "card-magic-missile",
       "description": "Magic Missile card art",
-      "imageUrl": "https://images.unsplash.com/photo-1558325443-0b0cf242ac84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFnaWMlMjBzcGVsbHxlbnwwfHx8fDE3NjA4NTY5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "magic spell"
+      "imageUrl": "https://images.unsplash.com/photo-1629450646462-9535b91839b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbmltZSUyMG1hZ2ljJTIwc3BlbGx8ZW58MHx8fHwxNzE3NzQwODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "anime magic"
     },
     {
       "id": "card-broom-flight",
@@ -15,26 +15,38 @@
     {
       "id": "card-healing-spray",
       "description": "Healing Spray card art",
-      "imageUrl": "https://images.unsplash.com/photo-1605030283629-918235b0b188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsaW5nJTIwbWFnaWN8ZW58MHx8fHwxNzYwOTMyNjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1611689103005-a8a35c91350a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhbmltZSUyMGhlYWxpbmclMjBtYWdpY3xlbnwwfHx8fDE3MTc3NDA5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "healing magic"
     },
     {
       "id": "card-pigeon-morph",
       "description": "Pigeon Morph card art",
-      "imageUrl": "https://images.unsplash.com/photo-1555581971-65c818274718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWdlb24lMjBmbHlpbmd8ZW58MHx8fHwxNzYwOTMyNjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pigeon flying"
+      "imageUrl": "https://images.unsplash.com/photo-1506220926122-cc5c12c75a26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3aGl0ZSUyMGRvdmV8ZW58MHx8fHwxNzE3NzQwOTQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "white dove"
     },
     {
       "id": "card-fire-storm",
       "description": "Fire Storm card art",
-      "imageUrl": "https://images.unsplash.com/photo-1588723957909-b91316f73456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaXJlJTIwc3BlbGx8ZW58MHx8fHwxNzYwOTMyNzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fire spell"
+      "imageUrl": "https://images.unsplash.com/photo-1599589635332-2a5433d343de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmltZSUyMGZpcmUlMjBtYWdpY3xlbnwwfHx8fDE3MTc3NDA5ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fire magic"
     },
     {
       "id": "card-ice-barrier",
       "description": "Ice Barrier card art",
       "imageUrl": "https://images.unsplash.com/photo-1634129003118-37a254f894bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWdpYyUyMHNoaWVsZHxlbnwwfHx8fDE3NjA5MzE1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ice shield"
+    },
+    {
+      "id": "card-time-rewind",
+      "description": "Time Rewind card art",
+      "imageUrl": "https://images.unsplash.com/photo-1517433456452-f1b979146a52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbmltZSUyMGNsb2NrJTIwbWFnaWN8ZW58MHx8fHwxNzE3NzQxMDYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magic clock"
+    },
+    {
+      "id": "card-resonance-magic",
+      "description": "Resonance Magic card art",
+      "imageUrl": "https://images.unsplash.com/photo-1641829946597-c6d5e7140f69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmltZSUyMGZyaWVuZHMlMjBtYWdpY3xlbnwwfHx8fDE3MTc3NDExMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magic friends"
     },
     {
       "id": "enemy-forest-spirit",
@@ -45,8 +57,8 @@
     {
       "id": "enemy-sadness-curse",
       "description": "The source of the curse in the Land of Sadness",
-      "imageUrl": "https://images.unsplash.com/photo-1582523275591-b3b455c1d683?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcnVzc2lhbiUyMGJsdWUlMjBjdXJzZXxlbnwwfHx8fDE3NjA5MzI4NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "blue curse"
+      "imageUrl": "https://images.unsplash.com/photo-1635544690327-4a06a6c25338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmltZSUyMGdpcmwlMjBjcnlpbmd8ZW58MHx8fHwxNzE3NzQxMjY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crying girl"
     }
   ]
 }
