@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "card-crimson-strike",
+      "description": "Crimson Strike card art",
+      "imageUrl": "https://images.unsplash.com/photo-1558325443-0b0cf242ac84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFnaWMlMjBzcGVsbHxlbnwwfHx8fDE3NjA4NTY5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magic spell"
+    },
+    {
+      "id": "card-arcane-shield",
+      "description": "Arcane Shield card art",
+      "imageUrl": "https://images.unsplash.com/photo-1634129003118-37a254f894bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWdpYyUyMHNoaWVsZHxlbnwwfHx8fDE3NjA5MzE1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magic shield"
+    },
+    {
+      "id": "card-mana-surge",
+      "description": "Mana Surge card art",
+      "imageUrl": "https://images.unsplash.com/photo-1498673394965-85cb14905c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWdpYyUyMGVuZXJneXxlbnwwfHx8fDE3NjA5MzE1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "magic energy"
+    },
+    {
+      "id": "enemy-goblin",
+      "description": "A goblin enemy",
+      "imageUrl": "https://images.unsplash.com/photo-1668795426012-68e400d21374?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYW50YXN5JTIwZ29ibGlufGVufDB8fHx8MTc2MDg2OTczNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy goblin"
+    },
+    {
+      "id": "enemy-golem",
+      "description": "A stone golem enemy",
+      "imageUrl": "https://images.unsplash.com/photo-1746349642233-fcfae6365ffc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdG9uZSUyMGdvbGVtfGVufDB8fHx8MTc2MDg2NTEzNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stone golem"
+    }
+  ]
 }
