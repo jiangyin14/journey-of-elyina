@@ -5,11 +5,11 @@ import CardComponent from './Card';
 
 interface PlayerHandProps {
   hand: CardData[];
-  onCardDragStart: (card: CardData | null) => void;
+  onCardMouseDown: (card: CardData, e: React.MouseEvent) => void;
   draggedCard: CardData | null;
 }
 
-export default function PlayerHand({ hand, onCardDragStart, draggedCard }: PlayerHandProps) {
+export default function PlayerHand({ hand, onCardMouseDown, draggedCard }: PlayerHandProps) {
 
   const handSize = hand.length;
   const spreadAngle = Math.min(handSize * 10, 80);
@@ -18,8 +18,6 @@ export default function PlayerHand({ hand, onCardDragStart, draggedCard }: Playe
 
   return (
     <div className="relative w-full h-full flex justify-center items-end pb-8">
-      <div className="absolute inset-0" onMouseUp={() => onCardDragStart(null)}></div>
-
       {hand.map((card, index) => {
         const isDragged = draggedCard === card;
         const rotation = handSize > 1 ? startAngle + index * angleStep : 0;
@@ -32,12 +30,13 @@ export default function PlayerHand({ hand, onCardDragStart, draggedCard }: Playe
             style={{
               transform: `rotate(${rotation}deg) translateY(${translateY}px)`,
               zIndex: isDragged ? 100 : index,
+              opacity: isDragged ? 0 : 1,
             }}
           >
             <CardComponent
               card={card}
-              onDragStart={onCardDragStart}
-              isDragged={isDragged}
+              onMouseDown={(e) => onCardMouseDown(card, e)}
+              isDragged={false} // Visual dragging is handled in GameBoard
             />
           </div>
         );

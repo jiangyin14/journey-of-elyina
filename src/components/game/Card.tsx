@@ -18,25 +18,20 @@ const CardIcon = ({ type }: { type: CardData['type'] }) => {
 
 interface CardComponentProps {
   card: CardData;
-  onDragStart: (card: CardData | null) => void;
+  onMouseDown: (e: React.MouseEvent) => void;
   isDragged: boolean;
 }
 
-export default function CardComponent({ card, onDragStart, isDragged }: CardComponentProps) {
-  const handleMouseDown = (e: React.MouseEvent) => {
-    e.preventDefault();
-    onDragStart(card);
-  };
-
+export default function CardComponent({ card, onMouseDown, isDragged }: CardComponentProps) {
   const cardStyle: React.CSSProperties = {
     transition: 'transform 0.2s ease-out, box-shadow 0.2s ease-out',
-    transform: isDragged ? 'scale(1.1) translateY(-20px)' : '',
+    transform: isDragged ? 'scale(1.1) rotate(0deg) translateY(-20px)' : '',
     boxShadow: isDragged ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : ''
   };
 
   return (
     <div
-      onMouseDown={handleMouseDown}
+      onMouseDown={onMouseDown}
       className="cursor-grab active:cursor-grabbing"
     >
       <Card
