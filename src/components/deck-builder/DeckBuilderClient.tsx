@@ -28,11 +28,11 @@ function SmallCard({ card, onAction, actionLabel }: { card: CardData, onAction: 
 export default function DeckBuilderClient() {
   const [deck, setDeck] = useState<CardData[]>(INITIAL_DECK);
   const { toast } = useToast();
-  const DECK_LIMIT = 15;
+  const DECK_LIMIT = 20;
 
   const addToDeck = (card: CardData) => {
     if (deck.length >= DECK_LIMIT) {
-      toast({ title: "卡组已满", description: `你的卡组不能超过 ${DECK_LIMIT} 张牌。`, variant: "destructive" });
+      toast({ title: "卡组已满", description: `旅行不能携带太多累赘，卡组不能超过 ${DECK_LIMIT} 张牌。`, variant: "destructive" });
       return;
     }
     setDeck(prev => [...prev, card]);
@@ -43,8 +43,7 @@ export default function DeckBuilderClient() {
   };
   
   const saveDeck = () => {
-    // Here you would save to Firestore. For now, we just show a toast.
-    toast({ title: "卡组已保存", description: "你的新卡组已准备好进行战斗！" });
+    toast({ title: "旅行日志已更新", description: "你的卡组已保存，准备好开启新的旅程！" });
   }
   
   return (
@@ -52,13 +51,13 @@ export default function DeckBuilderClient() {
       <div className="md:col-span-2">
         <Card>
           <CardHeader>
-            <CardTitle className="font-headline">可用卡牌</CardTitle>
+            <CardTitle className="font-headline">伊蕾娜的魔法收藏</CardTitle>
           </CardHeader>
           <CardContent>
             <ScrollArea className="h-[60vh]">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-1">
                 {ALL_CARDS.map((card, index) => (
-                    <SmallCard key={`${card.id}-${index}`} card={card} onAction={() => addToDeck(card)} actionLabel="添加"/>
+                    <SmallCard key={`${card.id}-${index}`} card={card} onAction={() => addToDeck(card)} actionLabel="加入卡组"/>
                 ))}
               </div>
             </ScrollArea>
@@ -71,7 +70,7 @@ export default function DeckBuilderClient() {
           <CardHeader>
             <div className="flex justify-between items-center">
               <CardTitle className="font-headline">当前卡组 ({deck.length}/{DECK_LIMIT})</CardTitle>
-              <Button onClick={saveDeck}>保存</Button>
+              <Button onClick={saveDeck}>记录日志</Button>
             </div>
           </CardHeader>
           <CardContent>
@@ -83,7 +82,7 @@ export default function DeckBuilderClient() {
                           <Button variant="ghost" size="sm" onClick={() => removeFromDeck(index)}>移除</Button>
                       </div>
                   ))}
-                  {deck.length === 0 && <p className="text-muted-foreground text-center py-8">你的卡组是空的。</p>}
+                  {deck.length === 0 && <p className="text-muted-foreground text-center py-8">你的行囊空空如也。</p>}
               </div>
             </ScrollArea>
           </CardContent>

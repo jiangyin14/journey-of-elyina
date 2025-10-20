@@ -1,34 +1,52 @@
 {
   "placeholderImages": [
     {
-      "id": "card-crimson-strike",
-      "description": "Crimson Strike card art",
+      "id": "card-magic-missile",
+      "description": "Magic Missile card art",
       "imageUrl": "https://images.unsplash.com/photo-1558325443-0b0cf242ac84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFnaWMlMjBzcGVsbHxlbnwwfHx8fDE3NjA4NTY5MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "magic spell"
     },
     {
-      "id": "card-arcane-shield",
-      "description": "Arcane Shield card art",
+      "id": "card-broom-flight",
+      "description": "Broom Flight card art",
+      "imageUrl": "https://images.unsplash.com/photo-1549692522-264227386e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aXRjaCUyMGZseWluZ3xlbnwwfHx8fDE3NjA5MzI1ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "witch flying"
+    },
+    {
+      "id": "card-healing-spray",
+      "description": "Healing Spray card art",
+      "imageUrl": "https://images.unsplash.com/photo-1605030283629-918235b0b188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxoZWFsaW5nJTIwbWFnaWN8ZW58MHx8fHwxNzYwOTMyNjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healing magic"
+    },
+    {
+      "id": "card-pigeon-morph",
+      "description": "Pigeon Morph card art",
+      "imageUrl": "https://images.unsplash.com/photo-1555581971-65c818274718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaWdlb24lMjBmbHlpbmd8ZW58MHx8fHwxNzYwOTMyNjk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pigeon flying"
+    },
+    {
+      "id": "card-fire-storm",
+      "description": "Fire Storm card art",
+      "imageUrl": "https://images.unsplash.com/photo-1588723957909-b91316f73456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmaXJlJTIwc3BlbGx8ZW58MHx8fHwxNzYwOTMyNzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fire spell"
+    },
+    {
+      "id": "card-ice-barrier",
+      "description": "Ice Barrier card art",
       "imageUrl": "https://images.unsplash.com/photo-1634129003118-37a254f894bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWdpYyUyMHNoaWVsZHxlbnwwfHx8fDE3NjA5MzE1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "magic shield"
+      "imageHint": "ice shield"
     },
     {
-      "id": "card-mana-surge",
-      "description": "Mana Surge card art",
-      "imageUrl": "https://images.unsplash.com/photo-1498673394965-85cb14905c89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWdpYyUyMGVuZXJneXxlbnwwfHx8fDE3NjA5MzE1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "magic energy"
+      "id": "enemy-forest-spirit",
+      "description": "A forest spirit enemy",
+      "imageUrl": "https://images.unsplash.com/photo-1615286922425-56067b57901e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZm9yZXN0JTIwc3Bpcml0fGVufDB8fHx8MTc2MDkzMjc5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark spirit"
     },
     {
-      "id": "enemy-goblin",
-      "description": "A goblin enemy",
-      "imageUrl": "https://images.unsplash.com/photo-1668795426012-68e400d21374?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYW50YXN5JTIwZ29ibGlufGVufDB8fHx8MTc2MDg2OTczNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "fantasy goblin"
-    },
-    {
-      "id": "enemy-golem",
-      "description": "A stone golem enemy",
-      "imageUrl": "https://images.unsplash.com/photo-1746349642233-fcfae6365ffc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdG9uZSUyMGdvbGVtfGVufDB8fHx8MTc2MDg2NTEzNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "stone golem"
+      "id": "enemy-sadness-curse",
+      "description": "The source of the curse in the Land of Sadness",
+      "imageUrl": "https://images.unsplash.com/photo-1582523275591-b3b455c1d683?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcnVzc2lhbiUyMGJsdWUlMjBjdXJzZXxlbnwwfHx8fDE3NjA5MzI4NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blue curse"
     }
   ]
 }

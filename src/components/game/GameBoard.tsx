@@ -51,12 +51,12 @@ export default function GameBoard() {
             <Frown className="w-24 h-24 text-destructive" />
         )}
         <h2 className="text-5xl font-headline font-bold text-primary">
-          {gameState.isGameOver === 'win' ? '胜利！' : '失败...'}
+          {gameState.isGameOver === 'win' ? '旅途顺利！' : '旅行暂时中止...'}
         </h2>
         <p className="text-muted-foreground">
-            {gameState.isGameOver === 'win' ? '你击败了敌人！' : '你的旅程到此为止。'}
+            {gameState.isGameOver === 'win' ? '你战胜了前方的阻碍，旅行还将继续。' : '倒下的魔女可没法写日志哦。'}
         </p>
-        <Button onClick={restartGame} size="lg">重新开始</Button>
+        <Button onClick={restartGame} size="lg">开启新的旅程</Button>
       </div>
     );
   }

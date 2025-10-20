@@ -2,22 +2,29 @@ import Image from 'next/image';
 import type { Enemy } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { Shield, Sword, Skull } from 'lucide-react';
+import { Shield, Sword, Skull, Sparkles } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const enemyImage = PlaceHolderImages.find(img => img.id === 'enemy-goblin');
+const enemyImageIdMap: { [key: string]: string } = {
+  'e1': 'enemy-forest-spirit',
+  'e2': 'enemy-sadness-curse',
+}
 
-const IntentIcon = ({ intentType }: { intentType: 'attack' | 'defend' | 'debuff' }) => {
+const IntentIcon = ({ intentType }: { intentType: 'attack' | 'defend' | 'debuff' | 'special' }) => {
+  const props = { className: "w-4 h-4" };
   switch (intentType) {
-    case 'attack': return <Sword className="w-4 h-4" />;
-    case 'defend': return <Shield className="w-4 h-4" />;
-    case 'debuff': return <Skull className="w-4 h-4" />;
+    case 'attack': return <Sword {...props} />;
+    case 'defend': return <Shield {...props} />;
+    case 'debuff': return <Skull {...props} />;
+    case 'special': return <Sparkles {...props} />;
     default: return null;
   }
 };
 
 export default function EnemyDisplay({ enemy }: { enemy: Enemy }) {
   const hpPercentage = (enemy.hp / enemy.maxHp) * 100;
+  
+  const enemyImage = PlaceHolderImages.find(img => img.id === enemyImageIdMap[enemy.id]);
 
   return (
     <div data-enemy-id={enemy.id}>
@@ -36,9 +43,9 @@ export default function EnemyDisplay({ enemy }: { enemy: Enemy }) {
                 data-ai-hint={enemyImage?.imageHint || "fantasy monster"}
                 unoptimized
             />
-            <div className="absolute -top-2 -right-2 bg-card border rounded-full p-2 flex items-center gap-1 text-lg font-bold">
+            <div className="absolute -top-2 -right-2 bg-card border rounded-full p-2 flex items-center gap-1 text-base font-bold">
                 <IntentIcon intentType={enemy.intent.type} />
-                {enemy.intent.value}
+                <span>{enemy.intent.description || enemy.intent.value}</span>
             </div>
             </div>
             <div className="w-full space-y-2">

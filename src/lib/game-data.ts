@@ -10,60 +10,95 @@ const findImage = (id: string) => {
 };
 
 export const ALL_CARDS: CardData[] = [
+  // 基础魔法卡
   {
     id: 'c1',
-    name: '绯红打击',
-    cost: 1,
+    name: '魔法导弹',
+    steps: 1,
+    cost: 0,
     type: 'attack',
-    description: '造成 6 点伤害。',
-    ...findImage('card-crimson-strike'),
+    description: '造成 5 点伤害。',
+    ...findImage('card-magic-missile'),
   },
   {
     id: 'c2',
-    name: '奥术护盾',
-    cost: 1,
+    name: '扫帚飞行',
+    steps: 1,
+    cost: 0,
     type: 'skill',
-    description: '获得 5 点格挡。',
-    ...findImage('card-arcane-shield'),
+    description: '本回合后续卡牌步数消耗-1。',
+    ...findImage('card-broom-flight'),
   },
   {
     id: 'c3',
-    name: '法力涌动',
-    cost: 0,
+    name: '治愈喷雾',
+    steps: 2,
+    cost: 1,
     type: 'skill',
-    description: '获得 1 点法力。抽 1 张牌。',
-    ...findImage('card-mana-surge'),
+    description: '恢复 4 点体力。',
+    special: 'heal',
+    ...findImage('card-healing-spray'),
+  },
+  {
+    id: 'c4',
+    name: '变身(鸽子)',
+    steps: 1,
+    cost: 1,
+    type: 'defense',
+    description: '本回合免疫1次敌人攻击。',
+    special: 'morph',
+    ...findImage('card-pigeon-morph'),
+  },
+  // 进阶魔法卡
+  {
+    id: 'c5',
+    name: '火焰风暴',
+    steps: 2,
+    cost: 3,
+    type: 'attack',
+    description: '造成 12 点伤害，并附加 2 回合的灼烧（每回合3点伤害）。',
+    special: 'fire',
+    ...findImage('card-fire-storm'),
+  },
+  {
+    id: 'c6',
+    name: '冰结屏障',
+    steps: 2,
+    cost: 2,
+    type: 'defense',
+    description: '获得 5 点护盾，并冻结敌人 1 回合。',
+    ...findImage('card-ice-barrier'),
   },
 ];
 
 export const INITIAL_DECK: CardData[] = [
-  ...Array(5).fill(ALL_CARDS.find(c => c.id === 'c1')),
-  ...Array(5).fill(ALL_CARDS.find(c => c.id === 'c2')),
-  ...Array(2).fill(ALL_CARDS.find(c => c.id === 'c3')),
+  ...Array(2).fill(ALL_CARDS.find(c => c.id === 'c1')), // 魔法导弹
+  ...Array(1).fill(ALL_CARDS.find(c => c.id === 'c2')), // 扫帚飞行
+  ...Array(2).fill(ALL_CARDS.find(c => c.id === 'c3')), // 治愈喷雾
+  ...Array(1).fill(ALL_CARDS.find(c => c.id === 'c4')), // 变身（鸽子）
 ].filter((c): c is CardData => c !== undefined);
 
 export const INITIAL_PLAYER: Player = {
-  hp: 80,
-  maxHp: 80,
+  hp: 30,
+  maxHp: 30,
   mana: 3,
   maxMana: 3,
-  actions: 1,
-  maxActions: 1,
+  steps: 3,
+  maxSteps: 3,
   deck: [],
   hand: [],
   discard: [],
   exhaust: [],
   statusEffects: [],
-  experience: 0,
-  level: 1,
   block: 0,
 };
 
 export const INITIAL_ENEMY: Enemy = {
   id: 'e1',
-  name: '哥布林',
-  hp: 50,
-  maxHp: 50,
-  intent: { type: 'attack', value: 7 },
+  name: '沉默森林的邪灵',
+  hp: 40,
+  maxHp: 40,
+  intent: { type: 'attack', value: 5, description: '攻击' },
   statusEffects: [],
+  attackWeakness: ['fire'],
 };

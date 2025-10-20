@@ -3,16 +3,16 @@
 import React from 'react';
 import Image from 'next/image';
 import type { CardData } from '@/lib/types';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Sword, BrainCircuit, Star } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Sword, Brain, Zap, Wand } from 'lucide-react';
 
 const CardIcon = ({ type }: { type: CardData['type'] }) => {
   const props = { className: "w-4 h-4" };
   switch (type) {
     case 'attack': return <Sword {...props} />;
-    case 'skill': return <BrainCircuit {...props} />;
-    case 'power': return <Star {...props} />;
-    default: return null;
+    case 'skill': return <Brain {...props} />;
+    case 'defense': return <Wand {...props} />;
+    default: return <Zap {...props} />;
   }
 }
 
@@ -28,6 +28,8 @@ export default function CardComponent({ card, onMouseDown, isDragged }: CardComp
     transform: isDragged ? 'scale(1.1) rotate(0deg) translateY(-20px)' : '',
     boxShadow: isDragged ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' : ''
   };
+  
+  const costLabel = `${card.steps}步 / ${card.cost}魔`;
 
   return (
     <div
@@ -41,8 +43,8 @@ export default function CardComponent({ card, onMouseDown, isDragged }: CardComp
         <CardHeader className="p-3">
           <div className="flex justify-between items-start">
             <CardTitle className="font-headline text-lg leading-tight">{card.name}</CardTitle>
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold text-lg">
-              {card.cost}
+            <div className="flex items-center justify-center h-8 px-2 rounded-full bg-primary text-primary-foreground font-bold text-sm">
+              {costLabel}
             </div>
           </div>
         </CardHeader>
@@ -56,10 +58,6 @@ export default function CardComponent({ card, onMouseDown, isDragged }: CardComp
             unoptimized
           />
           <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm p-2 text-primary-foreground">
-            <div className="flex items-center gap-2 pb-1 font-bold text-sm">
-              <CardIcon type={card.type} />
-              <span className="capitalize">{card.type === 'attack' ? '攻击' : '技能'}</span>
-            </div>
              <p className="text-xs">{card.description}</p>
           </div>
         </CardContent>

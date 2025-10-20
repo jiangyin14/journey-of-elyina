@@ -5,7 +5,7 @@ export default function ActionLog({ log }: { log: string[] }) {
   return (
     <Card className="h-full">
       <CardHeader>
-        <CardTitle className="font-headline">战斗记录</CardTitle>
+        <CardTitle className="font-headline">旅行日志</CardTitle>
       </CardHeader>
       <CardContent>
         <ScrollArea className="h-[250px] w-full pr-4">
